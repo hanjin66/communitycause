@@ -9,6 +9,7 @@ get_header(); ?>
 	<?php 
     echo do_shortcode("[metaslider id=48]"); 
      ?>
+
 	</div>
 
 </header>

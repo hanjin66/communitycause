@@ -50,8 +50,7 @@ $blue: #2779a8;
 $green: #a6ce39;
 $yellow: #fdb714;
 $red: #c63d27;
-
-
+$header: #ece0e7;
 
 // 1. Global
 // ---------
@@ -338,7 +337,7 @@ $drilldown-background: $white;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-background: $body-background;
+$dropdown-background: $purple;
 $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
@@ -423,11 +422,11 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-color-active: $purple;
+$menu-item-background-active: $yellow;
 $menu-icon-spacing: 0.25rem;
 $menu-item-background-hover: $light-gray;
-$menu-border: $light-gray;
+$menu-border: none;
 
 // 23. Meter
 // ---------
@@ -600,7 +599,7 @@ $thumbnail-radius: $global-radius;
 // -------------
 
 $titlebar-background: $outer-space;
-$titlebar-color: $white;
+$titlebar-color: $purple;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
@@ -623,9 +622,9 @@ $tooltip-radius: $global-radius;
 // 37. Top Bar
 // -----------
 
-$topbar-padding: 0;
-$topbar-background: $outer-space;
-$topbar-submenu-background: $outer-space;
+$topbar-padding: 5px;
+$topbar-background: $header;
+$topbar-submenu-background: $header;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

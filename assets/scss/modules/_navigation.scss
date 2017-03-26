@@ -14,7 +14,7 @@
     padding: 1rem;
 
     a {
-      color: $white;
+      color: $anchor-color;
       font-weight: 600;
       font-size: rem-calc(18);
       opacity: .75;
@@ -58,7 +58,7 @@
   .menu a {
     height: 45px;
     line-height: 45px;
-    color: #e6e6e6;
+    color: $anchor-color;
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
