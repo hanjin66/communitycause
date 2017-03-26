@@ -6941,6 +6941,9 @@ img.logo {
   float: left;
   margin: 10px 0; }
 
+div.top-bar-right {
+  margin-top: 50px; }
+
 @media screen and (max-width: 39.9375em) {
   .desktop-menu, .top-bar-left {
     display: none !important; } }
