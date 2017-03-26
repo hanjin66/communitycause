@@ -6,6 +6,9 @@ get_header(); ?>
 
 <header role="banner">
 	<div class="marketing">
+	<?php 
+    echo do_shortcode("[metaslider id=48]"); 
+     ?>
 	</div>
 
 </header>
