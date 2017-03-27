@@ -52,10 +52,12 @@ get_header(); ?>
 
 
 <section class="benefits">
-	<header>
-		<h2>Build Foundation based sites, powered by WordPress</h2>
-		<h4>Foundation is the professional choice for designers, developers and teams. <br /> WordPress is by far, <a href="http://trends.builtwith.com/cms">the world's most popular CMS</a> (currently powering 38% of the web).</h4>
-	</header>
+	<div class="card" style="width: 300px;">
+		<img src="assets/img/generic/rectangle-1.jpg">
+		<div class="card-section">
+		<p>This card makes use of the card-divider element.</p>
+	</div>
+</div>
 
 	<div class="semantic">
 		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/semantic.svg" alt="semantic">
