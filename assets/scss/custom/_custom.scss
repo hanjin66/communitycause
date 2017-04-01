@@ -6,3 +6,24 @@ img.logo {
 div.top-bar-right {
 	margin-top: 50px
 }
+
+// Card
+.card {
+	border-top: 2px solid $yellow;
+	min-height: 225px; 
+	max-height: 300px;
+	
+		.title {
+			position: relative;
+			top: 160px;
+			
+		h5 {
+			text-align: left;
+			color: $white;
+			margin: 10px;
+			a {
+				color: $white;
+			}
+		}	
+	}
+}

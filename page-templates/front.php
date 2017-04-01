@@ -6,12 +6,32 @@ get_header(); ?>
 
 <header role="banner">
 	<div class="marketing">
-	<?php 
-    echo do_shortcode("[metaslider id=48]"); 
-     ?>
-
+		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+		  <ul class="orbit-container">
+		    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+		    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+		    <li class="is-active orbit-slide">
+		      <img class="orbit-image" src="http://placehold.it/1920x600" alt="Space">
+		    </li>
+		    <li class="orbit-slide">
+		      <img class="orbit-image" src="http://placehold.it/1920x600" alt="Space">
+		    </li>
+		    <li class="orbit-slide">
+		      <img class="orbit-image" src="http://placehold.it/1920x600" alt="Space">
+		    </li>
+		    <li class="orbit-slide">
+		      <img class="orbit-image" src="http://placehold.it/1920x600" alt="Space">
+		    </li>
+		  </ul>
+	 	</div>
 	</div>
-
+	<row>
+		<div class="large expanded button-group">
+		  <a class="button warning">Donate</a>
+		  <a class="button success">Volunteer</a>
+		  <a class="button secondary">Events</a>
+		</div>
+	</row>
 </header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
@@ -23,6 +43,7 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 			<div class="entry-content">
 				<?php the_content(); ?>
+				
 			</div>
 			<footer>
 				<?php
@@ -46,47 +67,68 @@ get_header(); ?>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<div class="section-divider">
-	<hr />
-</div>
 
 
 <section class="benefits">
-	<div class="card" style="width: 300px;">
-		<img src="assets/img/generic/rectangle-1.jpg">
-		<div class="card-section">
-		<p>This card makes use of the card-divider element.</p>
+	<div class="row">
+		<div class="columns">
+			<h1>HOW WE CAN HELP YOU</h1>
+		</div>
 	</div>
-</div>
-
-	<div class="semantic">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/semantic.svg" alt="semantic">
-		<h3>Semantic</h3>
-		<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
-	</div>
-
-	<div class="responsive">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/responsive.svg" alt="responsive">
-		<h3>Responsive</h3>
-		<p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p>
-
-	</div>
-
-	<div class="customizable">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/customizable.svg" alt="customizable">
-		<h3>Customizable</h3>
-		<p>You can customize your build to include or remove certain elements, as well as define the size of columns, colors, font size and more.</p>
-
-	</div>
-
-	<div class="professional">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/demo/professional.svg" alt="professional">
-		<h3>Professional</h3>
-		<p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
-	</div>
-
-	<div class="why-foundation">
-		<a href="/kitchen-sink">See what's in Foundation out of the box →</a>
+	<div class="row">
+		<?php if ( have_posts() ) : ?>
+	    <?php while ( have_posts() ) : the_post(); ?>
+	  	<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small' );?>			
+			
+			<div class="small-12 large-3 columns">
+				<div class="card" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover;">
+			        <div class="title">
+			        	<h5 class="text-left">
+			        	    <a href="#"><?php the_title(); ?></a>
+			        	</h5>
+			        </div>
+			        <div class="expanded button-group">
+						<a class="primary button">View</a>
+					</div>  
+		        </div>
+        </div>
+		<?php endwhile; ?>
+	 	<?php endif; ?>
+	
+	
+	
+	
+        	
+		<div class="small-12 large-3 columns">
+			<div class="card" style="background: url('http://placehold.it/350x350') no-repeat; background-size: cover;">
+				
+				<h3><?php the_title(); ?></h3>
+				<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+				<div class="button-group">
+				  <a class="secondary button">View</a>
+				</div>	
+			</div>
+		</div>
+		<div class="small-12 large-3 columns">
+			<div class="card" style="background: url('http://placehold.it/350x350') no-repeat; background-size: cover;">
+				
+				
+				<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+				<div class="button-group">
+				  <a class="secondary button">View</a>
+				</div>	
+			</div>
+		</div>
+		<div class="small-12 large-3 columns">
+			<div class="card" style="background: url('http://placehold.it/350x350') no-repeat; background-size: cover;">
+				
+				<h3><?php the_title(); ?></h3>
+				<p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+				<div class="button-group">
+				  <a class="secondary button">View</a>
+				</div>	
+			</div>
+		</div>
 	</div>
 
 </section>
