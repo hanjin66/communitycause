@@ -7250,6 +7250,11 @@ img.logo {
   float: left;
   margin: 10px 0; }
 
+.object-fit {
+  -webkit-background-size: auto auto;
+          background-size: auto;
+  background-repeat: no-repeat; }
+
 div.top-bar-right {
   margin-top: 50px; }
 
