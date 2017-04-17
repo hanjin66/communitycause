@@ -1,0 +1,21 @@
+// scss-lint:disable all
+
+ .hero-placeholder {
+    background-image: url(data:image/jpeg;base64,<?php echo base64Encoder(wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'small')); ?>);  // No lint reported
+  }
+
+  .hero-image {
+    background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'small'); ?>); // No lint reported
+  }
+
+  @media (min-width: 600px) {
+    .hero-image {
+      background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium'); ?>); // No lint reported
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .hero-image {
+      background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>); // No lint reported
+    }
+  }

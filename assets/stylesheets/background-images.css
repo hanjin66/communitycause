@@ -1,0 +1,22 @@
+<style type="text/css">
+  .bg-featured-small {
+    background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'featured-small'); ?>);
+  }
+
+  @media (min-width: 640px) {
+    .bg-featured-medium {
+      background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'featured-medium'); ?>);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .featured-featured-large {
+      background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>);
+    }
+  }
+  @media (min-width: 1920px) {
+    .featured-small {
+      background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large'); ?>);
+    }
+  }
+  </style>
