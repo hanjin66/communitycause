@@ -1,0 +1,26 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin margin($size) {
+  margin: $size; //Fallback in px
+  margin: calculateRem($size);
+}
+
+@mixin margin-top($size) {
+  margin-top: $size; //Fallback in px
+  margin-top: calculateRem($size);
+}
+
+@mixin margin-bottom($size) {
+  margin-bottom: $size; //Fallback in px
+  margin-bottom: calculateRem($size);
+}
+
+
+// Padding shorthand version
+@mixin padding($size) {
+  padding: $size;
+  padding: calculateRem($size);
+}
