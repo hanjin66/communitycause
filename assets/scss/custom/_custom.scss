@@ -32,3 +32,26 @@ div.top-bar-right {
 		}	
 	}
 }
+
+.box {
+  display: flex;
+  align-items: stretch;
+  width: 100vw;
+}
+.a {
+	background-image: url('http://placehold.it/820x310/666');
+  flex: 150px 0 150px;
+}
+.b-c {
+	background-image: url('http://placehold.it/820x310/333');
+	flex-direction: column;
+	display: flex;
+	flex-grow: 1;
+}
+
+.banner {
+	background-image: url('http://placehold.it/820x310/666');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;   
+}

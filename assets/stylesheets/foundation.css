@@ -2590,7 +2590,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -3467,9 +3467,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   color: inherit;
   text-rendering: optimizeLegibility; }
   h1 small,
@@ -3605,7 +3605,7 @@ code {
   padding: 0.125rem 0.3125rem 0.0625rem;
   border: 1px solid #cacaca;
   background-color: #e6e6e6;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "Anonymous Pro", Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #0a0a0a; }
 
@@ -3613,7 +3613,7 @@ kbd {
   margin: 0;
   padding: 0.125rem 0.25rem 0;
   background-color: #e6e6e6;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "Anonymous Pro", Consolas, "Liberation Mono", Courier, monospace;
   color: #0a0a0a; }
 
 .subheader {
@@ -6145,7 +6145,7 @@ a.thumbnail {
       flex-wrap: wrap; }
   .top-bar,
   .top-bar ul {
-    background-color: #ece0e7; }
+    background-color: #cacaca; }
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }
@@ -7246,6 +7246,52 @@ a.thumbnail {
 /*
   My custom styles:
 */
+.purple {
+  background: #9e2064; }
+
+.blue {
+  background: #2779a8; }
+
+.green {
+  background: #a6ce39; }
+
+.yellow {
+  background: #fdb714; }
+
+.red {
+  background: #c63d27; }
+
+.light-gray {
+  background: #e6e6e6; }
+
+.medium-gray {
+  background: #cacaca; }
+
+.dark-gray {
+  background: #8a8a8a; }
+
+.dark-gray {
+  background: #cacaca; }
+
+.purple-txt {
+  color: #9e2064; }
+
+.blue-txt {
+  color: #2779a8; }
+
+.green-txt {
+  color: #a6ce39; }
+
+.yellow-txt {
+  color: #fdb714; }
+
+.red-txt {
+  color: #c63d27; }
+
+.margin-top-80 {
+  margin-top: 80px;
+  margin-top: 5rem; }
+
 img.logo {
   float: left;
   margin: 10px 0; }
@@ -7271,6 +7317,41 @@ div.top-bar-right {
       margin: 10px; }
       .card .title h5 a {
         color: #fefefe; }
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100vw; }
+
+.a {
+  background-image: url("http://placehold.it/820x310/666");
+  -webkit-box-flex: 150px;
+      -ms-flex: 150px 0 150px;
+          flex: 150px 0 150px; }
+
+.b-c {
+  background-image: url("http://placehold.it/820x310/333");
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.banner {
+  background-image: url("http://placehold.it/820x310/666");
+  background-repeat: no-repeat;
+  background-position: left;
+  -webkit-background-size: cover;
+          background-size: cover; }
 
 @media screen and (max-width: 39.9375em) {
   .desktop-menu, .top-bar-left {

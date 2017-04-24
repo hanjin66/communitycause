@@ -14,29 +14,25 @@ get_header(); ?>
 
 <header role="banner">
 	
-	<div class="row">
+	<div class="row margin-top-80">
 		<div class="columns">
 		<h1 class="text-center">WE HELP PEOPLE DO GOOD</h1>
+		</div>
 	</div>
 	
-	<div class="row collapse">
-		<div class="small-12 medium-6 large-6 columns">
-			  <img src="http://placehold.it/820x620/" alt="">
-		</div>
-		
-		<div class="small-12 medium-6 large-6 columns">
-			<div class="row collapse">
-			  	<img src="http://placehold.it/820x310/666" alt="">
-			</div>
-			<div class="row collapse">
-			  	<img src="http://placehold.it/820x310/555" alt="">
-			</div>
-		</div>
-	</div>
+	<div class="row  collapse banner">
+		<div class="box flex">
+			<div class="small-12 medium-6 large-6 columns">A</div>
+			<div class="b-c flex column">
+			    <div class="small-12 medium-6 large-6 columns">B</div>
+			    <div class="small-12 medium-6 large-6 columns">C</div>
+		  </div>
+		<div>
+	</div>	
 </header>
 
 <section role="benefits">
-	<div class="row">
+	<div class="row margin-top-80">
 		<div class="columns">
 			<h2 class="text-center">WE CAN HELP YOU</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea suscipit, amet assumenda nostrum modi excepturi, vel quos quas, eos et commodi odio culpa soluta! Repellendus temporibus illum perspiciatis! Tenetur, maxime!</p>

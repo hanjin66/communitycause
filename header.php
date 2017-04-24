@@ -7,7 +7,6 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -31,18 +30,15 @@
 		<div class="title-bar" data-responsive-toggle="mobile-menu">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="/wp-content/themes/communitycause/assets/images/logo/community-cause-logo.png" alt="CmmunityCause.org"></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</div>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="fixed">
-				<div class="top-bar-left">
-				
+			<div class="top-bar-left">
 				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="/wp-content/themes/communitycause/assets/images/logo/community-cause-logo.png" alt="CmmunityCause.org"></a></li>
+					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
 				</ul>
-			</div>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
