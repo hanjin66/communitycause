@@ -20,93 +20,174 @@ get_header(); ?>
 		</div>
 	</div>
 	
-	<div class="row  collapse banner">
-		<div class="box flex">
-			<div class="small-12 medium-6 large-6 columns">A</div>
-			<div class="b-c flex column">
-			    <div class="small-12 medium-6 large-6 columns">B</div>
-			    <div class="small-12 medium-6 large-6 columns">C</div>
-		  </div>
-		<div>
-	</div>	
+	<div class="row collapse">
+		<div class="small-12 medium-6 large-6 columns flex-container flex-dir-column ">
+		    <img src="<?php echo get_template_directory_uri() . '/assets/images/photos/donate.png'; ?>">
+		    <span class="btn-float">
+		        <a class="success button large btn-160" href="#">Donate &gt;</a>
+		  </span>
+		</div>
+	  
+		<div class="small-12 medium-6 large-6 column b-c">
+		    <div class="row">
+                <div class="columns">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/photos/volunteer.jpg'; ?>">
+                    <span class="btn-float">
+                        <a class="primary button large btn-160" href="#">Volunteer &gt;</a>
+                    </span>
+                </div>
+            </div>
+		 </div>
+		 
+		 <div class="small-12 medium-6 large-6 column b-c">
+		    <div class="row">
+                <div class="columns">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/photos/give.jpg'; ?>">
+                    <span class="btn-float">
+                        <a class="warning button large btn-160" href="#">Events &gt;</a>
+                    </span>
+                </div>
+            </div>
+		 </div>
+	</div>
 </header>
 
-<section role="benefits">
+
+<section role="about">
 	<div class="row margin-top-80">
 		<div class="columns">
-			<h2 class="text-center">WE CAN HELP YOU</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea suscipit, amet assumenda nostrum modi excepturi, vel quos quas, eos et commodi odio culpa soluta! Repellendus temporibus illum perspiciatis! Tenetur, maxime!</p>
-		</div>
-	</div>
-	<div class="row small-up-1 medium-up-3 large-up-3">
-		<div class="column column-block">
-			<img src="//placehold.it/600x600" class="thumbnail" alt="">
-			<a class="hollow button expanded" href="#">Such Expand</a>
-		</div>
-		<div class="column column-block">
-			<img src="//placehold.it/600x600" class="thumbnail" alt="">
-			<a class="hollow button expanded" href="#">Such Expand</a>
-		</div>
-		<div class="column column-block">
-		<img src="//placehold.it/600x600" class="thumbnail" alt="">
-			<a class="hollow button expanded" href="#">Such Expand</a>
-		</div>
-	</div>			
-</section>
-
-<section>
-	<div class="row">
-		<div class="columns">
-			<h2 class="text-center">ABOUT US</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea suscipit, amet assumenda nostrum modi excepturi, vel quos quas, eos et commodi odio culpa soluta! Repellendus temporibus illum perspiciatis! Tenetur, maxime!</p>
+			<h2 class="text-center">WHAT WE’RE ALL ABOUT</h2>
 		</div>
 	</div>
 	
 	<div class="row">
 		<div class="columns">
 			<ul class="tabs" data-tabs id="example-tabs">
-			  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">OUR MISSION</a></li>
-			  <li class="tabs-title text-center"><a href="#panel2">OUR BELIEFS</a></li>
-			  <li class="tabs-title"><a href="#panel3">OUR VISION</a></li>
+			  
+        <!--  Our Mission Tab title -->
+                <?php 
+                    query_posts('page_id=7756');
+                    
+                    while ( have_posts() ) : the_post()
+                ?>  
+    			  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><?php echo get_the_title(); ?></a></li>
+    			<?php
+                        endwhile; 
+                        wp_reset_query();
+                ?>   
+                
+                
+        <!--  Our Beliefs Tab title -->       
+    
+                <?php 
+                    query_posts('page_id=7764');
+                    while ( have_posts() ) : the_post()
+                ?>  
+    			  <li class="tabs-title"><a href="#panel2" aria-selected="true"><?php echo get_the_title(); ?></a></li>
+    			<?php
+                        endwhile; 
+                        wp_reset_query();
+                ?>        
+    			  
+        <!--  Our Vision Tab title -->   
+    			
+    			<?php 
+                    query_posts('page_id=7766');
+                    while ( have_posts() ) : the_post()
+                ?>  
+    			  <li class="tabs-title"><a href="#panel3" aria-selected="true"><?php echo get_the_title(); ?></a></li>
+    			<?php
+                        endwhile; 
+                        wp_reset_query();
+                ?> 
 			</ul>
 			<div class="tabs-content" data-tabs-content="example-tabs">
+    
+        <!--  Our Mission Tab Content -->
+                <?php 
+                    query_posts("page_id=7756");
+                    while ( have_posts() ) : the_post()
+                ?>
+    			
 				<div class="tabs-panel is-active" id="panel1">
-					<p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+					<p><?php the_excerpt(); ?></p>
 				</div>
-				<div class="tabs-panel" id="panel2">
-					<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+            
+                <?php
+                    endwhile; 
+                    wp_reset_query();
+                ?> 
+                
+                
+        <!--  Our Beliefs Tab Content -->          
+				<?php 
+                    query_posts("page_id=7764");
+                    while ( have_posts() ) : the_post()
+                ?>
+    			
+				<div class="tabs-panel is-active" id="panel2">
+					<p><?php the_excerpt(); ?></p>
 				</div>
-				<div class="tabs-panel" id="panel3">
-					<p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+            
+                <?php
+                    endwhile; 
+                    wp_reset_query();
+                ?>
+                
+        <!--  Our Beliefs Tab Content -->          
+				<?php 
+                    query_posts("page_id=7766");
+                    while ( have_posts() ) : the_post()
+                ?>
+    			
+				<div class="tabs-panel is-active" id="panel3">
+					<p><?php the_excerpt(); ?></p>
 				</div>
+            
+                <?php
+                    endwhile; 
+                    wp_reset_query();
+                ?> 
+				
+				
+				<?php 
+                    query_posts("page_id=7766");
+                    while ( have_posts() ) : the_post()
+                ?>
+    			
+				<div class="tabs-panel is-active" id="panel2">
+					<p><?php the_excerpt(); ?></p>
+				</div>
+            
+                <?php
+                    endwhile; 
+                    wp_reset_query();
+                ?> 
+
 			</div>
 		</div>
 	</div>
 	
-	<div class="row">
-		<div class="large-6 large-offset-3 columns">
-			<a class="hollow button expanded" href="#">MORE</a>
-		</div>
-	</div>
-	
+		
 </section>
 
 <section role="events">
-	<div class="row">
+	<div class="row  margin-top-80">
 		<div class="columns">
-			<h2 class="text-center">WE CAN HELP YOU</h2>
+			<h2 class="text-center">Events</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea suscipit, amet assumenda nostrum modi excepturi, vel quos quas, eos et commodi odio culpa soluta! Repellendus temporibus illum perspiciatis! Tenetur, maxime!</p>
 		</div>
 	</div>
+	
 	<div class="row">
 			<div class="small-6 medium-8 large-8 columns">
 				<div class="row">
-					<div class="small-6 medium-6 large-6 columns">
+					<div class="columns">
 						<div class="thumbnail">
 							<img src="http://placehold.it/600x400/666">
 						</div>
 					</div>
-					<div class="small-6 medium-6 large-6 columns">
+					<div class="columns">
 						<div class="thumbnail">
 							<img src="http://placehold.it/600x400/666">
 						</div>	
@@ -114,12 +195,12 @@ get_header(); ?>
 				</div>
 				
 				<div class="row">
-					<div class="small-6 medium-6 large-6 columns">
+					<div class="columns">
 						<div class="thumbnail">
 							<img src="http://placehold.it/600x400/666">
 						</div>
 					</div>
-					<div class="small-6 medium-6 large-6 columns">
+					<div class="columns">
 						<div class="thumbnail">
 							<img src="http://placehold.it/600x400/666">
 						</div>	

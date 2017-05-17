@@ -38,20 +38,41 @@ div.top-bar-right {
   align-items: stretch;
   width: 100vw;
 }
-.a {
-	background-image: url('http://placehold.it/820x310/666');
-  flex: 150px 0 150px;
+
+.donate {
+	display: -webkit-flex;
+    display: flex;
+    height: 400px;
 }
+
 .b-c {
-	background-image: url('http://placehold.it/820x310/333');
-	flex-direction: column;
-	display: flex;
-	flex-grow: 1;
+	display: -webkit-flex;
+    display: flex;
+    height: 200px;
 }
 
 .banner {
-	background-image: url('http://placehold.it/820x310/666');
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;   
 }
+
+
+.btn-float {
+    position: relative;
+    bottom: 80px;
+    left: 0;
+    z-index: 3;
+}
+
+.btn-160 {
+    min-width: 160px;
+}
+
+    .tabs {
+        margin: 0;
+        border: none ;
+        border-bottom: 1px solid #e6e6e6;
+        background: #fefefe;
+        list-style-type: none;
+    }
